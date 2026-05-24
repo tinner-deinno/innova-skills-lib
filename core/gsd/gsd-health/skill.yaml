@@ -1,0 +1,20 @@
+id: gsd-health
+name: gsd-health
+version: 1.0.0
+description: |
+  Diagnose planning directory health and optionally repair issues
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-health
+  - /gsd-health
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

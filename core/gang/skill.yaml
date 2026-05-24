@@ -1,0 +1,24 @@
+id: gang
+name: gang
+version: 1.0.0
+description: |
+  ระบบ Multi-Agent Gangs — โต้ตอบและจัดการ 4 gangs เฉพาะทาง: a-devops (DevOps Auto-Repair),
+  b-ci (CI/CD Quality Gate), c-jarvis (Jarvis Autonomous Assistant), d-special (Strategic
+  Planning) ทำงานผ่าน mdes.ollama endpoint พร้อม model fallback chain ผ่าน /auto-model
+  รองรับ: /gang, /gang list, /gang activate, /gang run, /gang status, /gang logs, /gang demo
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - gang
+  - /gang
+env:
+  required: []
+  optional:
+    - OLLAMA_HOST
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

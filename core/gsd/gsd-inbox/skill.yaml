@@ -1,0 +1,20 @@
+id: gsd-inbox
+name: gsd-inbox
+version: 1.0.0
+description: |
+  Triage and review open GitHub issues and PRs against project templates and contribution guidelines.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-inbox
+  - /gsd-inbox
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

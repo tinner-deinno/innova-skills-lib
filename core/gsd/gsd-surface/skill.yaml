@@ -1,0 +1,20 @@
+id: gsd-surface
+name: gsd-surface
+version: 1.0.0
+description: |
+  Toggle which skills are surfaced — apply a profile, list, or disable a cluster without reinstall
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-surface
+  - /gsd-surface
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

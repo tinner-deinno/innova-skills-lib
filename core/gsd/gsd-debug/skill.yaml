@@ -1,0 +1,20 @@
+id: gsd-debug
+name: gsd-debug
+version: 1.0.0
+description: |
+  Systematic debugging with persistent state across context resets
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-debug
+  - /gsd-debug
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

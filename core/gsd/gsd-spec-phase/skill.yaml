@@ -1,0 +1,20 @@
+id: gsd-spec-phase
+name: gsd-spec-phase
+version: 1.0.0
+description: |
+  Clarify WHAT a phase delivers with ambiguity scoring; produces a SPEC.md before discuss-phase.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-spec-phase
+  - /gsd-spec-phase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

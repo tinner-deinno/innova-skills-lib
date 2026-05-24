@@ -1,0 +1,25 @@
+id: model-MDES
+name: model-MDES
+version: 1.0.0
+description: |
+  ส่งงานไปยัง MDES Ollama endpoint (https://ollama.mdes-innova.online) — infrastructure
+  ภายในของ MDES Innova รองรับ gemma4:26b (Thai/general), qwen2.5:72b (reasoning),
+  qwen2.5-coder (code), gemma2:9b (fast/light) พร้อม auto-routing และ telemetry logging
+  รองรับ: /model-MDES [prompt], --model, --status
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - model-MDES
+  - /model-MDES
+env:
+  required:
+    - OLLAMA_TOKEN
+  optional:
+    - OLLAMA_API_TOKEN
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

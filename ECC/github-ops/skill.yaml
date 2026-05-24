@@ -1,0 +1,12 @@
+id: ecc-github-ops
+name: github-ops
+version: 1.0.0
+description: GitHub repository operations, automation, and management. Issue triage, PR management, CI/CD operations, release management, and security monitoring using the gh CLI.
+author: ecc-team
+license: MIT
+category: ecc
+runtimes: [claude]
+triggers: [github-ops]
+metadata:
+  source: ecc-library
+  created_at: "2026-05-24T00:00:00Z"

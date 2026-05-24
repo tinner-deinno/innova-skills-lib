@@ -1,0 +1,25 @@
+id: xray
+name: xray
+version: 1.0.0
+description: |
+  [core] v26.4.18-alpha.22 G-SKLL | X-ray deep scan — inspect Claude Code auto-memory,
+  installed skills, or session history. Use when user says "xray", "x-ray", "memory",
+  "scan memory", "what do you remember", "show memories", "memory stats", "forget",
+  "list skills", "installed skills", "session history", or wants to inspect what the AI
+  remembers across sessions. Do NOT trigger for Oracle vault/psi (use /trace) or session
+  handoffs (use /inbox).
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - xray
+  - /xray
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

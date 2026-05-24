@@ -1,0 +1,12 @@
+id: ecc-token-budget-advisor
+name: token-budget-advisor
+version: 1.0.0
+description: Offers the user an informed choice about how much response depth to consume before answering. Use when the user explicitly wants to control response length, depth, or token budget.
+author: ecc-team
+license: MIT
+category: ecc
+runtimes: [claude]
+triggers: [token-budget-advisor]
+metadata:
+  source: ecc-library
+  created_at: "2026-05-24T00:00:00Z"

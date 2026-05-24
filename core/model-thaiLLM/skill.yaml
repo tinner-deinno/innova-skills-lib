@@ -1,0 +1,24 @@
+id: model-thaiLLM
+name: model-thaiLLM
+version: 1.0.0
+description: |
+  ส่งงานไปยัง ThaiLLM API — รองรับ 4 โมเดลเฉพาะทาง: openthaigpt (เทคนิค/โค้ด),
+  pathumma (ราชการ/กฎหมาย), typhoon (ธุรกิจ/สรุป), thalle (การศึกษา/วิชาการ)
+  พร้อม auto-routing ตาม routing matrix และ telemetry logging
+  รองรับ: /model-thaiLLM [งาน], --model, --list
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - model-thaiLLM
+  - /model-thaiLLM
+env:
+  required:
+    - THAILLM_TOKEN
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

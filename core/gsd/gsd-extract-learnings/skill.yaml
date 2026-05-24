@@ -1,0 +1,20 @@
+id: gsd-extract-learnings
+name: gsd-extract-learnings
+version: 1.0.0
+description: |
+  Extract decisions, lessons, patterns, and surprises from completed phase artifacts
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-extract-learnings
+  - /gsd-extract-learnings
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

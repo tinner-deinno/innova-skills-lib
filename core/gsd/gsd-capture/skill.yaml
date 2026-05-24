@@ -1,0 +1,20 @@
+id: gsd-capture
+name: gsd-capture
+version: 1.0.0
+description: |
+  Capture ideas, tasks, notes, and seeds to their destination
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-capture
+  - /gsd-capture
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

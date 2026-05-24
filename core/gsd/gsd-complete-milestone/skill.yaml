@@ -1,0 +1,20 @@
+id: gsd-complete-milestone
+name: gsd-complete-milestone
+version: 1.0.0
+description: |
+  Archive completed milestone and prepare for next version
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-complete-milestone
+  - /gsd-complete-milestone
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

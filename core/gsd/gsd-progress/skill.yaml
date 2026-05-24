@@ -1,0 +1,20 @@
+id: gsd-progress
+name: gsd-progress
+version: 1.0.0
+description: |
+  Check progress, advance workflow, or dispatch freeform intent — the unified GSD situational command
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-progress
+  - /gsd-progress
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

@@ -1,0 +1,20 @@
+id: gsd-docs-update
+name: gsd-docs-update
+version: 1.0.0
+description: |
+  Generate or update project documentation verified against the codebase
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-docs-update
+  - /gsd-docs-update
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

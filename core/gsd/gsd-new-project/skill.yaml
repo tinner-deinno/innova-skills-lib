@@ -1,0 +1,20 @@
+id: gsd-new-project
+name: gsd-new-project
+version: 1.0.0
+description: |
+  Initialize a new project with deep context gathering and PROJECT.md
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-new-project
+  - /gsd-new-project
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

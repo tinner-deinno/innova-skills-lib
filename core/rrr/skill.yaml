@@ -1,0 +1,23 @@
+id: rrr
+name: rrr
+version: 1.0.0
+description: |
+  [standard] v26.5.16 G-SKLL | Create session retrospective with AI diary and lessons
+  learned. Use when user says "rrr", "retrospective", "wrap up session", "session summary",
+  or at end of work session. Supports --quick (memory only), --detail (full template),
+  --deep (5 parallel subagents), --deep --teammate (3 coordinated team agents).
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - rrr
+  - /rrr
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

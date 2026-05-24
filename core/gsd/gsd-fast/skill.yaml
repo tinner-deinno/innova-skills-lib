@@ -1,0 +1,20 @@
+id: gsd-fast
+name: gsd-fast
+version: 1.0.0
+description: |
+  Execute a trivial task inline — no subagents, no planning overhead
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-fast
+  - /gsd-fast
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

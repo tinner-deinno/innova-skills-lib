@@ -1,0 +1,20 @@
+id: gsd-eval-review
+name: gsd-eval-review
+version: 1.0.0
+description: |
+  Audit an executed AI phase's evaluation coverage and produce an EVAL-REVIEW.md remediation plan.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-eval-review
+  - /gsd-eval-review
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

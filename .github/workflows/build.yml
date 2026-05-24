@@ -1,0 +1,59 @@
+name: Build — Register & Generate Adapters
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    name: Register skills and generate adapters
+    runs-on: ubuntu-latest
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout
+      # -----------------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history so the commit step can push back
+          fetch-depth: 0
+
+      # -----------------------------------------------------------------------
+      # 2. Set up Python
+      # -----------------------------------------------------------------------
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # -----------------------------------------------------------------------
+      # 3. Register skills (builds / updates skills_manifest.json)
+      # -----------------------------------------------------------------------
+      - name: Register skills
+        run: python tools/register_skills.py
+
+      # -----------------------------------------------------------------------
+      # 4. Generate adapters (reads manifest, writes adapters/claude/*.md)
+      # -----------------------------------------------------------------------
+      - name: Generate adapters
+        run: python tools/generate_adapters.py
+
+      # -----------------------------------------------------------------------
+      # 5. Commit manifest + adapters if changed
+      #    [ci skip] prevents the commit from re-triggering this workflow.
+      # -----------------------------------------------------------------------
+      - name: Commit manifest if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add manifests/skills_manifest.json adapters/claude/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: auto-update manifest and adapters [ci skip]"
+            git push
+          fi

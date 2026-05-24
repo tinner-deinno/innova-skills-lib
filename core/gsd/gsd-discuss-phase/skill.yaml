@@ -1,0 +1,20 @@
+id: gsd-discuss-phase
+name: gsd-discuss-phase
+version: 1.0.0
+description: |
+  Gather phase context through adaptive questioning before planning.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-discuss-phase
+  - /gsd-discuss-phase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

@@ -1,0 +1,20 @@
+id: gsd-review-backlog
+name: gsd-review-backlog
+version: 1.0.0
+description: |
+  Review and promote backlog items to active milestone
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-review-backlog
+  - /gsd-review-backlog
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

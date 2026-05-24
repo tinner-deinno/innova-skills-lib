@@ -1,0 +1,24 @@
+id: model-copilot
+name: model-copilot
+version: 1.0.0
+description: |
+  ส่งงานผ่าน GitHub Copilot (GitHub Models Marketplace API) — เข้าถึง GPT-4o, Meta Llama
+  และโมเดลอื่นๆ ผ่าน GitHub subscription เดียว ใช้ GITHUB_COPILOT_TOKEN จาก ~/Jit/.env
+  รองรับ auto-routing ตามประเภทงาน และ token logging ไปที่ telemetry
+  รองรับ: /model-copilot [prompt], --model, --list, --status
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - model-copilot
+  - /model-copilot
+env:
+  required:
+    - GITHUB_COPILOT_TOKEN
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

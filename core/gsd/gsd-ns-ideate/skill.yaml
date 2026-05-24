@@ -1,0 +1,20 @@
+id: gsd-ns-ideate
+name: gsd-ns-ideate
+version: 1.0.0
+description: |
+  exploration capture | explore sketch spike spec capture
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ns-ideate
+  - /gsd-ns-ideate
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

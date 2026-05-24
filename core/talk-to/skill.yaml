@@ -1,0 +1,24 @@
+id: talk-to
+name: talk-to
+version: 1.0.0
+description: |
+  [core] v26.4.18-alpha.22 G-SKLL | Talk to another Oracle agent via contacts + threads.
+  Use when user says "talk to", "message", "chat with", or wants to communicate with another
+  agent (e.g. "talk to pulse", "message neo"). Do NOT trigger for OracleNet social feed
+  (use /oraclenet), skill management (use /oracle), or family registry
+  (use /oracle-family-scan).
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - talk-to
+  - /talk-to
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

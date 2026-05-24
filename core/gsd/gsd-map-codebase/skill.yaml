@@ -1,0 +1,20 @@
+id: gsd-map-codebase
+name: gsd-map-codebase
+version: 1.0.0
+description: |
+  Analyze codebase with parallel mapper agents to produce .planning/codebase/ documents
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-map-codebase
+  - /gsd-map-codebase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

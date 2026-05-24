@@ -1,0 +1,20 @@
+id: gsd-stats
+name: gsd-stats
+version: 1.0.0
+description: |
+  Display project statistics — phases, plans, requirements, git metrics, and timeline
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-stats
+  - /gsd-stats
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

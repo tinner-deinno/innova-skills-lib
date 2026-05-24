@@ -1,0 +1,20 @@
+id: gsd-ui-phase
+name: gsd-ui-phase
+version: 1.0.0
+description: |
+  Generate UI design contract (UI-SPEC.md) for frontend phases
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ui-phase
+  - /gsd-ui-phase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

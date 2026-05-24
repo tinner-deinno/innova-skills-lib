@@ -1,0 +1,20 @@
+id: gsd-quick
+name: gsd-quick
+version: 1.0.0
+description: |
+  Execute a quick task with GSD guarantees (atomic commits, state tracking) but skip optional agents
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-quick
+  - /gsd-quick
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

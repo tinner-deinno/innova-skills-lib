@@ -1,0 +1,20 @@
+id: gsd-config
+name: gsd-config
+version: 1.0.0
+description: |
+  Configure GSD settings — workflow toggles, advanced knobs, integrations, and model profile
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-config
+  - /gsd-config
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

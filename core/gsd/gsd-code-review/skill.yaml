@@ -1,0 +1,20 @@
+id: gsd-code-review
+name: gsd-code-review
+version: 1.0.0
+description: |
+  Review source files changed during a phase for bugs, security issues, and code quality problems
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-code-review
+  - /gsd-code-review
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

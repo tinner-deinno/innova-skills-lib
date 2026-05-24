@@ -1,0 +1,20 @@
+id: gsd-phase
+name: gsd-phase
+version: 1.0.0
+description: |
+  CRUD for phases in ROADMAP.md — add, insert, remove, or edit phases
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-phase
+  - /gsd-phase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

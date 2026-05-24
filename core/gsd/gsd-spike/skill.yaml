@@ -1,0 +1,20 @@
+id: gsd-spike
+name: gsd-spike
+version: 1.0.0
+description: |
+  Spike an idea through experiential exploration, or propose what to spike next (frontier mode)
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-spike
+  - /gsd-spike
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

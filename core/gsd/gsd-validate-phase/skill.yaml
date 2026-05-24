@@ -1,0 +1,20 @@
+id: gsd-validate-phase
+name: gsd-validate-phase
+version: 1.0.0
+description: |
+  Retroactively audit and fill Nyquist validation gaps for a completed phase
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-validate-phase
+  - /gsd-validate-phase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

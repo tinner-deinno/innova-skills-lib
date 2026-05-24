@@ -1,0 +1,20 @@
+id: gsd-help
+name: gsd-help
+version: 1.0.0
+description: |
+  Show available GSD commands and usage guide
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-help
+  - /gsd-help
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

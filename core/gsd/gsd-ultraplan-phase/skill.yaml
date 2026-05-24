@@ -1,0 +1,20 @@
+id: gsd-ultraplan-phase
+name: gsd-ultraplan-phase
+version: 1.0.0
+description: |
+  [BETA] Offload plan phase to Claude Code's ultraplan cloud; review in browser and import back.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ultraplan-phase
+  - /gsd-ultraplan-phase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

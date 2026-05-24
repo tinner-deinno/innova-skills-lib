@@ -1,0 +1,25 @@
+id: team-agents
+name: team-agents
+version: 1.0.0
+description: |
+  [core] v26.4.18-alpha.22 G-SKLL | Spin up coordinated agent teams for any task. Reusable
+  framework for TeamCreate/SendMessage/TaskList patterns. Use when user says "team-agents",
+  "spin up a team", "use teammates", "parallel agents", "coordinate agents", "fan out", or
+  wants multiple agents working together with coordination. Do NOT trigger for simple subagent
+  work (use Agent tool directly) or inter-Oracle messaging (use /talk-to).
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - team-agents
+  - /team-agents
+env:
+  required: []
+  optional:
+    - CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

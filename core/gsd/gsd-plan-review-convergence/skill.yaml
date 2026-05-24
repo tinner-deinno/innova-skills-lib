@@ -1,0 +1,20 @@
+id: gsd-plan-review-convergence
+name: gsd-plan-review-convergence
+version: 1.0.0
+description: |
+  Cross-AI plan convergence loop — replan with review feedback until no HIGH concerns remain.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-plan-review-convergence
+  - /gsd-plan-review-convergence
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

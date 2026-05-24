@@ -1,0 +1,20 @@
+id: gsd-ns-workflow
+name: gsd-ns-workflow
+version: 1.0.0
+description: |
+  workflow | discuss plan execute verify phase progress
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ns-workflow
+  - /gsd-ns-workflow
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

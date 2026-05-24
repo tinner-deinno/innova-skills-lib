@@ -1,0 +1,20 @@
+id: gsd-ns-review
+name: gsd-ns-review
+version: 1.0.0
+description: |
+  quality gates | code review debug audit security eval ui
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ns-review
+  - /gsd-ns-review
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

@@ -1,0 +1,23 @@
+id: monitor
+name: monitor
+version: 1.0.0
+description: |
+  ระบบ TUI Monitoring สำหรับ Sub-Agents — ติดตามและ observe สถานะของ sub-agents แบบ
+  เรียลไทม์ผ่าน Terminal User Interface ทำงานร่วมกับ multi-agent-gangs ที่ ~/multi-agent-gangs/
+  แสดงสถานะการทำงานของ agent, แถบความก้าวหน้า, ข้อมูลเวลา และสถานะของ gangs ทั้งหมด
+  รองรับ: /monitor, /monitor agents, /monitor gangs, /monitor logs, /monitor watch
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - monitor
+  - /monitor
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

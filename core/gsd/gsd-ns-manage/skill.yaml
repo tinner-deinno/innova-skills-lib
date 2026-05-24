@@ -1,0 +1,20 @@
+id: gsd-ns-manage
+name: gsd-ns-manage
+version: 1.0.0
+description: |
+  config workspace | workstreams thread update ship inbox
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ns-manage
+  - /gsd-ns-manage
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

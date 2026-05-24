@@ -1,0 +1,12 @@
+id: ecc-eval-harness
+name: eval-harness
+version: 1.0.0
+description: Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles.
+author: ecc-team
+license: MIT
+category: ecc
+runtimes: [claude]
+triggers: [eval-harness]
+metadata:
+  source: ecc-library
+  created_at: "2026-05-24T00:00:00Z"

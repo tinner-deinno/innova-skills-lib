@@ -1,0 +1,20 @@
+id: gsd-profile-user
+name: gsd-profile-user
+version: 1.0.0
+description: |
+  Generate developer behavioral profile and create Claude-discoverable artifacts
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-profile-user
+  - /gsd-profile-user
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

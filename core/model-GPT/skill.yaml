@@ -1,0 +1,26 @@
+id: model-GPT
+name: model-GPT
+version: 1.0.0
+description: |
+  ส่งงานไปยัง OpenAI API โดยตรง — รองรับ GPT-4o, GPT-4o-mini, GPT-4-turbo, o1-mini,
+  o3-mini ใช้ OPENAI_API_KEY จาก ~/Jit/.env พร้อม auto-routing ตามประเภทงาน (reasoning,
+  quick, long-context) และ token logging ไปที่ telemetry
+  รองรับ: /model-GPT [prompt], --model, --list, --status
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - model-GPT
+  - /model-GPT
+env:
+  required:
+    - OPENAI_API_KEY
+  optional:
+    - OPENAI_DEFAULT_MODEL
+    - OPENAI_BASE_URL
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

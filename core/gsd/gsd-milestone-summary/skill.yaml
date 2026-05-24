@@ -1,0 +1,20 @@
+id: gsd-milestone-summary
+name: gsd-milestone-summary
+version: 1.0.0
+description: |
+  Generate a comprehensive project summary from milestone artifacts for team onboarding and review
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-milestone-summary
+  - /gsd-milestone-summary
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

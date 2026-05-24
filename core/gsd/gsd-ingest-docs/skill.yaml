@@ -1,0 +1,20 @@
+id: gsd-ingest-docs
+name: gsd-ingest-docs
+version: 1.0.0
+description: |
+  Bootstrap or merge a .planning/ setup from existing ADRs, PRDs, SPECs, and docs in a repo.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ingest-docs
+  - /gsd-ingest-docs
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

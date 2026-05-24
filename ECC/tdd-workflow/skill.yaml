@@ -1,0 +1,12 @@
+id: ecc-tdd-workflow
+name: tdd-workflow
+version: 1.0.0
+description: Use when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.
+author: ecc-team
+license: MIT
+category: ecc
+runtimes: [claude]
+triggers: [tdd-workflow]
+metadata:
+  source: ecc-library
+  created_at: "2026-05-24T00:00:00Z"

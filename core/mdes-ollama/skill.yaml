@@ -1,0 +1,26 @@
+id: mdes-ollama
+name: mdes-ollama
+version: 1.0.0
+description: |
+  ระบบประสานงานโมเดลหลัก (Central Orchestrator) — ทดสอบและสำรองโมเดล AI อัตโนมัติ
+  ทำหน้าที่เป็นตัวประสานงานให้กับทุก skill ที่ต้องการใช้ AI models บน MDES Ollama endpoint
+  รองรับ fallback chain: mdes.ollama -> codex -> GPT Pro -> GitHub Copilot
+  รองรับ: /mdes-ollama, --test, --force, --status, --report, --tokens, --stats, --dev-loop,
+  --integrate
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - mdes-ollama
+  - /mdes-ollama
+env:
+  required: []
+  optional:
+    - OLLAMA_TOKEN
+    - OLLAMA_API_TOKEN
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

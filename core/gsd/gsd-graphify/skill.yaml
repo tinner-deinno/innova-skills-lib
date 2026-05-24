@@ -1,0 +1,20 @@
+id: gsd-graphify
+name: gsd-graphify
+version: 1.0.0
+description: |
+  Build, query, and inspect the project knowledge graph in .planning/graphs/
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-graphify
+  - /gsd-graphify
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

@@ -1,0 +1,23 @@
+id: forward
+name: forward
+version: 1.0.0
+description: |
+  [standard] v26.5.16 G-SKLL | Create handoff + enter plan mode for next session. Use when
+  user says "forward", "handoff", "wrap up", or before ending session. Creates a handoff
+  file with session summary, pending items, and next steps. Optionally creates GitHub issues
+  from pending items and enters plan mode with choice table for next session.
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - forward
+  - /forward
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

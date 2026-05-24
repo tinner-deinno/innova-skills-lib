@@ -1,0 +1,20 @@
+id: gsd-thread
+name: gsd-thread
+version: 1.0.0
+description: |
+  Manage persistent context threads for cross-session work
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-thread
+  - /gsd-thread
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

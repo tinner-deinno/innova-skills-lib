@@ -1,0 +1,20 @@
+id: gsd-new-milestone
+name: gsd-new-milestone
+version: 1.0.0
+description: |
+  Start a new milestone cycle — update PROJECT.md and route to requirements
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-new-milestone
+  - /gsd-new-milestone
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

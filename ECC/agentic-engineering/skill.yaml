@@ -1,0 +1,12 @@
+id: ecc-agentic-engineering
+name: agentic-engineering
+version: 1.0.0
+description: Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.
+author: ecc-team
+license: MIT
+category: ecc
+runtimes: [claude]
+triggers: [agentic-engineering]
+metadata:
+  source: ecc-library
+  created_at: "2026-05-24T00:00:00Z"

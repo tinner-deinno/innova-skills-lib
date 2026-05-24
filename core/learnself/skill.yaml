@@ -1,0 +1,23 @@
+id: learnself
+name: learnself
+version: 1.0.0
+description: |
+  ระบบเรียนรู้ตัวเองและส่งต่องานระหว่าง Agent ในกลุ่ม Multi-Agent Gangs
+  ช่วยให้ Agent สามารถเรียนรู้จากประวัติการทำงานเมื่อไม่มีงานทำ ส่งต่องานอัตโนมัติเมื่อ
+  ต้องเปลี่ยน Agent และล้างงานก่อนจบ session รองรับ: /learnself, /learnself history,
+  /learnself handoff, /learnself clear, /learnself status
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - learnself
+  - /learnself
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

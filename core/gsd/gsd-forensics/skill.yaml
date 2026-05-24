@@ -1,0 +1,20 @@
+id: gsd-forensics
+name: gsd-forensics
+version: 1.0.0
+description: |
+  Post-mortem investigation for failed GSD workflows — diagnoses what went wrong.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-forensics
+  - /gsd-forensics
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

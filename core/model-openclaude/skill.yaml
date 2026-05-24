@@ -1,0 +1,28 @@
+id: model-openclaude
+name: model-openclaude
+version: 1.0.0
+description: |
+  เปิด OpenClaude TUI หรือรันคำสั่งแบบ non-interactive ผ่าน provider ที่ต้องการ
+  รองรับ 5 providers: mdes (default), github, openai, thaillm, local
+  มี shortcuts ทั้ง PowerShell และ Bash พร้อม fallback chain (mdes -> github -> local)
+  Trigger: /model-openclaude, /oc, "เปิด openclaude", "openclaude [provider]"
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - model-openclaude
+  - /model-openclaude
+  - /oc
+env:
+  required: []
+  optional:
+    - OLLAMA_TOKEN
+    - OPENAI_API_KEY
+    - GITHUB_COPILOT_TOKEN
+    - THAILLM_TOKEN
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

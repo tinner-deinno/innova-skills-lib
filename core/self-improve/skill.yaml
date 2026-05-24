@@ -1,0 +1,23 @@
+id: self-improve
+name: self-improve
+version: 1.0.0
+description: |
+  ทักษะพัฒนาตัวเองอัตโนมัติโดยใช้วงจร PDCA — เรียนรู้จากประวัติการทำงาน ทดสอบด้วยการ
+  ดำเนินการขั้นตอน จำสิ่งที่ทำได้ถูกต้อง แก้ไขสิ่งที่ทำผิดพลาด และเสริมเป็นวิธีการที่ดีขึ้น
+  สำหรับครั้งถัดไป รองรับ: /self-improve --goal, /self-improve --history,
+  /self-improve --reset
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - self-improve
+  - /self-improve
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

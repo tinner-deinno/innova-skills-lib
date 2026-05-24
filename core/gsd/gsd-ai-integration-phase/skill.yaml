@@ -1,0 +1,20 @@
+id: gsd-ai-integration-phase
+name: gsd-ai-integration-phase
+version: 1.0.0
+description: |
+  Generate an AI-SPEC.md design contract for phases that involve building AI systems.
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ai-integration-phase
+  - /gsd-ai-integration-phase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

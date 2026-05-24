@@ -1,0 +1,12 @@
+id: ecc-cost-tracking
+name: cost-tracking
+version: 1.0.0
+description: Track and report Claude Code token usage, spending, and budgets from a local cost-tracking database. Use when the user asks about costs, spending, usage, tokens, budgets, or cost breakdowns by project, tool, session, or date.
+author: ecc-team
+license: MIT
+category: ecc
+runtimes: [claude]
+triggers: [cost-tracking]
+metadata:
+  source: ecc-library
+  created_at: "2026-05-24T00:00:00Z"

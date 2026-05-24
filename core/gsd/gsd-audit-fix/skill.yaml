@@ -1,0 +1,20 @@
+id: gsd-audit-fix
+name: gsd-audit-fix
+version: 1.0.0
+description: |
+  Autonomous audit-to-fix pipeline — find issues, classify, fix, test, commit
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-audit-fix
+  - /gsd-audit-fix
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

@@ -1,0 +1,20 @@
+id: gsd-add-tests
+name: gsd-add-tests
+version: 1.0.0
+description: |
+  Generate tests for a completed phase based on UAT criteria and implementation
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-add-tests
+  - /gsd-add-tests
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

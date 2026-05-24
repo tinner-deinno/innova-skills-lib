@@ -1,0 +1,20 @@
+id: gsd-mvp-phase
+name: gsd-mvp-phase
+version: 1.0.0
+description: |
+  Plan a phase as a vertical MVP slice — user story, SPIDR splitting, then plan-phase
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-mvp-phase
+  - /gsd-mvp-phase
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

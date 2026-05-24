@@ -1,0 +1,12 @@
+id: ecc-autonomous-loops
+name: autonomous-loops
+version: 1.0.0
+description: Patterns and architectures for autonomous Claude Code loops — from simple sequential pipelines to RFC-driven multi-agent DAG systems.
+author: ecc-team
+license: MIT
+category: ecc
+runtimes: [claude]
+triggers: [autonomous-loops]
+metadata:
+  source: ecc-library
+  created_at: "2026-05-24T00:00:00Z"

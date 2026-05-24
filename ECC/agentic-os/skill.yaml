@@ -1,0 +1,12 @@
+id: ecc-agentic-os
+name: agentic-os
+version: 1.0.0
+description: Build persistent multi-agent operating systems on Claude Code. Covers kernel architecture, specialist agents, slash commands, file-based memory, scheduled automation, and state management without external databases.
+author: ecc-team
+license: MIT
+category: ecc
+runtimes: [claude]
+triggers: [agentic-os]
+metadata:
+  source: ecc-library
+  created_at: "2026-05-24T00:00:00Z"

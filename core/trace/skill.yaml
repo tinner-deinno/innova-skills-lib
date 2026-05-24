@@ -1,0 +1,25 @@
+id: trace
+name: trace
+version: 1.0.0
+description: |
+  [standard] v26.5.16 G-SKLL | Find projects, code, and knowledge across git history, repos,
+  docs, and Oracle. Use when user asks "trace", "find project", "where is [project]",
+  "search history", or needs to locate something across the codebase. Supports --oracle
+  (fast), --smart (default), --deep (wave execution), --deep --dig (combo). Do NOT trigger
+  for session mining or "past sessions" (use /dig), or codebase exploration "learn repo"
+  (use /learn).
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+triggers:
+  - trace
+  - /trace
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  created_at: "2026-05-24T00:00:00Z"
+  updated_at: "2026-05-24T00:00:00Z"

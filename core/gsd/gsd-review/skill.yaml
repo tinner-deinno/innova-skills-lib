@@ -1,0 +1,20 @@
+id: gsd-review
+name: gsd-review
+version: 1.0.0
+description: |
+  Request cross-AI peer review of phase plans from external AI CLIs
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-review
+  - /gsd-review
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

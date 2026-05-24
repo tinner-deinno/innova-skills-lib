@@ -1,0 +1,20 @@
+id: gsd-resume-work
+name: gsd-resume-work
+version: 1.0.0
+description: |
+  Resume work from previous session with full context restoration
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-resume-work
+  - /gsd-resume-work
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

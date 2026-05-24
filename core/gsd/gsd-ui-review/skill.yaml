@@ -1,0 +1,20 @@
+id: gsd-ui-review
+name: gsd-ui-review
+version: 1.0.0
+description: |
+  Retroactive 6-pillar visual audit of implemented frontend code
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-ui-review
+  - /gsd-ui-review
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

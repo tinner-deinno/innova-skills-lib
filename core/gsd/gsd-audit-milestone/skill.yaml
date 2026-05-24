@@ -1,0 +1,20 @@
+id: gsd-audit-milestone
+name: gsd-audit-milestone
+version: 1.0.0
+description: |
+  Audit milestone completion against original intent before archiving
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-audit-milestone
+  - /gsd-audit-milestone
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"

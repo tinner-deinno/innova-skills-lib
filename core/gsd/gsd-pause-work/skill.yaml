@@ -1,0 +1,20 @@
+id: gsd-pause-work
+name: gsd-pause-work
+version: 1.0.0
+description: |
+  Create context handoff when pausing work mid-phase
+author: team/jit-bigboss
+license: MIT
+category: gsd
+runtimes:
+  - claude
+triggers:
+  - gsd-pause-work
+  - /gsd-pause-work
+env:
+  required: []
+  optional: []
+metadata:
+  source: global-skills
+  suite: gsd
+  created_at: "2026-05-24T00:00:00Z"
