@@ -1,7 +1,7 @@
 # Skills Index
 
-Generated: 2026-05-24  
-Total: **291** skills  
+Generated: 2026-07-06  
+Total: **295** skills  
 
 ---
 
@@ -13,12 +13,14 @@ Total: **291** skills
 | `agents-logs` | Agents Logs | `/agents-logs` วิเคราะห์ telemetry log จาก `ψ/telemetry/token_log.jsonl` |
 | `agents-rank` | Agents Rank | `/agents-rank` วิเคราะห์ประสิทธิภาพของ agents จากข้อมูลจริง: |
 | `agents-skills` | Agents Skills | `/agents-skills` แสดงโปรไฟล์ทักษะของ agents ทั้งหมดในระบบมนุษย์ Agent (21 agents) |
+| `auto-compact` | auto-compact | Proactive context management — save state, compact, recover. Fire when context approaches limit to p |
 | `auto-model` | Auto Model | ระบบตรวจสอบและสำรองโมเดลอัตโนมัติ สำหรับ mdes.ollama endpoint |
 | `auto-model-switch` | Auto Model Switch | Auto-selects the best AI model for the task — saves tokens, optimizes quality. |
 | `auto-tune` | Auto Tune | Analyze token telemetry data (`token_log.jsonl`) to identify inefficient agents and skills, then pro |
 | `awaken` | awaken | [core] v26.4.18-alpha.22 G-SKLL \| "Guided Oracle birth and awakening ritual. Default is Soul Sync ( |
 | `bampenpien` | bampenpien | [core] v26.4.18-alpha.22 G-SKLL \| "บำเพ็ญเพียร — diligent practice. A guided conversation between h |
 | `bud` | bud | [core] v26.4.18-alpha.22 G-SKLL \| Create a new oracle via maw bud — yeast-colony reproduction. Use  |
+| `compact-recovery` | compact-recovery | Recover skills and state after context compaction — restores Oracle awareness |
 | `debug-mantra` | debug-mantra | Four-mantra debugging discipline — reproduce, trace the fail path, falsify the hypothesis, cross-ref |
 | `dig` | dig | [core] v26.4.18-alpha.22 G-SKLL \| Mine Claude Code sessions — timeline, gaps, repo attribution, ses |
 | `forward` | forward | [standard] v26.5.16 G-SKLL \| Create handoff + enter plan mode for next session. Use when user says  |
@@ -92,6 +94,7 @@ Total: **291** skills
 | `gsd-workspace` | gsd-workspace | Manage GSD workspaces — create, list, or remove isolated workspace environments |
 | `gsd-workstreams` | gsd-workstreams | Manage parallel workstreams — list, create, switch, status, progress, complete, and resume |
 | `jit` | Jit | Jit Agent คือตัวแทน AI อิสระที่ทำงานร่วมกับ BigBoss ในระบบ multi-agent-gangs สามารถสั่งการ นาย (Boss |
+| `jit-bootstrap` | Jit Bootstrap | ``` |
 | `learn` | learn | [core] v26.4.18-alpha.22 G-SKLL \| Explore a codebase with parallel Haiku agents — clone, read, and  |
 | `learnself` | Learnself | `/learnself` คือทักษะสำหรับระบบเรียนรู้อัตโนมัติและการส่งต่องานระหว่าง Agent ในกลุ่ม Multi-Agent Gan |
 | `management-talk` | management-talk | Rewrite engineer-to-engineer content for engineering-org leadership (VPs, directors, PMs, release ma |
@@ -112,6 +115,7 @@ Total: **291** skills
 | `post-mortem` | post-mortem | Write the canonical engineering record of a fixed bug — root cause, mechanism, fix, validation, and  |
 | `recap` | recap | [standard] v26.5.16 G-SKLL \| Session orientation and awareness — retro summaries, handoffs, git sta |
 | `rrr` | rrr | [standard] v26.5.16 G-SKLL \| Create session retrospective with AI diary and lessons learned. Use wh |
+| `screenshot` | screenshot | Take screenshot via ShareX or Playwright |
 | `scrutinize` | scrutinize | Outsider-perspective end-to-end review of a plan, PR, or code change. First questions intent and whe |
 | `self-improve` | Self Improve | ทักษะนี้ไม่ใช่แค่การทำงาน แต่เป็นวงจรการเรียนรู้ที่พัฒนาตัวเองได้: |
 | `talk-to` | talk-to | [core] v26.4.18-alpha.22 G-SKLL \| Talk to another Oracle agent via contacts + threads. Use when use |

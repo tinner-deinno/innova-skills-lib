@@ -1,0 +1,31 @@
+id: jit-bootstrap
+name: jit-bootstrap
+version: 1.0.0
+description: |
+  Portable bootstrap + health-sync for Jit across runtimes.
+  Idempotently ensures the local Jit repo has the latest innova-skills-lib,
+  skills/agents synced into every runtime (Claude, cmdc, agy, Hermes, Oracle),
+  and body/soul health checks passing.
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+  - cmdc
+  - agy
+triggers:
+  - jit-bootstrap
+  - /jit-bootstrap
+  - /bootstrap
+env:
+  required:
+    - JIT_ROOT
+  optional:
+    - INNOVA_SKILLS_LIB
+    - CLAUDE_SKILLS_ROOT
+    - ORACLE_URL
+    - INNOVA_BOT_PORT
+metadata:
+  source: global-skills
+  created_at: "2026-07-06T00:00:00Z"
+  updated_at: "2026-07-06T00:00:00Z"

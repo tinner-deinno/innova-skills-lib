@@ -1,11 +1,10 @@
 {
   "manifest_version": "1.0",
-  "generated": "2026-05-24T14:21:06.264648Z",
+  "generated": "2026-07-06T09:33:36.949568Z",
   "total": 295,
   "categories": [
     "core",
-    "ecc",
-    "9arm"
+    "ecc"
   ],
   "skills": [
     {
@@ -91,6 +90,29 @@
       },
       "triggers": [
         "agents-skills"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
+      "id": "auto-compact",
+      "name": "auto-compact",
+      "path": "auto-compact",
+      "version": "2026.05.24",
+      "description": "Proactive context management — save state, compact, recover. Fire when context approaches limit to prevent silent skill loss.",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "auto-compact"
       ],
       "author": "team/jit-bigboss",
       "category": "core",
@@ -229,6 +251,29 @@
       },
       "triggers": [
         "bud"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
+      "id": "compact-recovery",
+      "name": "compact-recovery",
+      "path": "compact-recovery",
+      "version": "2026.05.24",
+      "description": "Recover skills and state after context compaction — restores Oracle awareness",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "compact-recovery"
       ],
       "author": "team/jit-bigboss",
       "category": "core",
@@ -6081,6 +6126,29 @@
       "manifest_version": "1.0"
     },
     {
+      "id": "jit-bootstrap",
+      "name": "Jit Bootstrap",
+      "path": "jit-bootstrap",
+      "version": "2026.05.24",
+      "description": "```",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "jit-bootstrap"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
       "id": "learn",
       "name": "learn",
       "path": "learn",
@@ -6541,6 +6609,29 @@
       "manifest_version": "1.0"
     },
     {
+      "id": "screenshot",
+      "name": "screenshot",
+      "path": "screenshot",
+      "version": "2026.05.24",
+      "description": "Take screenshot via ShareX or Playwright",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "screenshot"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
       "id": "scrutinize",
       "name": "scrutinize",
       "path": "scrutinize",
@@ -6700,108 +6791,6 @@
       ],
       "last_updated": "2026-05-24T00:00:00Z",
       "manifest_version": "1.0"
-    },
-    {
-      "id": "9arm-debug-mantra",
-      "name": "debug-mantra",
-      "path": "9arm/engineering/debug-mantra",
-      "version": "2026.05.24",
-      "description": "[9arm] Four-step debugging discipline — reproduce reliably, trace the fail path, falsify the hypothesis, cross-reference every breadcrumb. Recite the mantra verbatim at the start of any debug session. Trigger: /debug-mantra",
-      "runtimes": [
-        "claude"
-      ],
-      "adapter_status": {
-        "claude": "ok"
-      },
-      "triggers": [
-        "debug-mantra"
-      ],
-      "author": "9arm",
-      "category": "9arm",
-      "tags": [
-        "debugging",
-        "engineering",
-        "9arm"
-      ],
-      "last_updated": "2026-05-24T00:00:00Z"
-    },
-    {
-      "id": "9arm-post-mortem",
-      "name": "post-mortem",
-      "path": "9arm/engineering/post-mortem",
-      "version": "2026.05.24",
-      "description": "[9arm] Write the canonical engineering RCA/post-mortem record after a bug is fixed — root cause, mechanism, fix, validation, prevention. Trigger: /post-mortem",
-      "runtimes": [
-        "claude"
-      ],
-      "adapter_status": {
-        "claude": "ok"
-      },
-      "triggers": [
-        "post-mortem",
-        "postmortem",
-        "RCA",
-        "root-cause-analysis"
-      ],
-      "author": "9arm",
-      "category": "9arm",
-      "tags": [
-        "post-mortem",
-        "rca",
-        "engineering",
-        "9arm"
-      ],
-      "last_updated": "2026-05-24T00:00:00Z"
-    },
-    {
-      "id": "9arm-scrutinize",
-      "name": "scrutinize",
-      "path": "9arm/engineering/scrutinize",
-      "version": "2026.05.24",
-      "description": "[9arm] Outsider-perspective end-to-end review of a plan, PR, or code change. Questions intent first, then traces the actual code path to verify the change does what it claims. Trigger: /scrutinize",
-      "runtimes": [
-        "claude"
-      ],
-      "adapter_status": {
-        "claude": "ok"
-      },
-      "triggers": [
-        "scrutinize"
-      ],
-      "author": "9arm",
-      "category": "9arm",
-      "tags": [
-        "review",
-        "code-review",
-        "engineering",
-        "9arm"
-      ],
-      "last_updated": "2026-05-24T00:00:00Z"
-    },
-    {
-      "id": "9arm-management-talk",
-      "name": "management-talk",
-      "path": "9arm/productivity/management-talk",
-      "version": "2026.05.24",
-      "description": "[9arm] Rewrite engineer-to-engineer content for leadership (VP, director, PM, exec). Shape for the channel: JIRA, Slack, standup, email, or meeting talking-points. Trigger: /management-talk",
-      "runtimes": [
-        "claude"
-      ],
-      "adapter_status": {
-        "claude": "ok"
-      },
-      "triggers": [
-        "management-talk"
-      ],
-      "author": "9arm",
-      "category": "9arm",
-      "tags": [
-        "productivity",
-        "communication",
-        "management",
-        "9arm"
-      ],
-      "last_updated": "2026-05-24T00:00:00Z"
     }
   ]
 }
