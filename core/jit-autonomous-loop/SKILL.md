@@ -26,6 +26,7 @@ that survives pythonw, stray launches, console encoding issues, and flaky provid
 4. **Never let logging crash the loop.** Every log write is wrapped so a bad path or record is archived, not fatal.
 5. **Branch the workload by cycle.** Fast cheap check every tick; expensive full check every N ticks.
 6. **Atomic writes for state files.** Write to `.tmp`, then `os.replace`.
+7. **Force UTF-8 stdout/stderr on Windows.** The default cp1252 console crashes on `ψ/`, Thai, or emoji; reconfigure to `utf-8` at entry.
 
 ## Pattern A: Windows named-mutex singleton loop
 
@@ -35,6 +36,7 @@ that survives pythonw, stray launches, console encoding issues, and flaky provid
 """Minimal durable autonomous loop."""
 from __future__ import annotations
 
+import atexit
 import ctypes
 import json
 import os
@@ -48,7 +50,19 @@ ROOT = Path(__file__).resolve().parent
 LOG = ROOT / "loop.jsonl"
 MUTEX = os.environ.get("LOOP_MUTEX", r"Local\my_loop_singleton")
 INTERVAL = int(os.environ.get("LOOP_INTERVAL", "300"))
+MAX_LOG_BYTES = int(os.environ.get("LOOP_MAX_LOG_BYTES", str(50 * 1024 * 1024)))
 _LOCK_HANDLE: Any | None = None
+
+
+def _release_singleton() -> None:
+    """Best-effort release of the Windows named mutex handle on exit."""
+    global _LOCK_HANDLE
+    if _LOCK_HANDLE and sys.platform == "win32":
+        try:
+            ctypes.windll.kernel32.CloseHandle(_LOCK_HANDLE)
+        except Exception:  # noqa: BLE001
+            pass
+        _LOCK_HANDLE = None
 
 
 def run_cycle(cycle_no: int,
@@ -70,9 +84,12 @@ def run_cycle(cycle_no: int,
 
 
 def append_log(record: dict, path: Path = LOG) -> None:
-    """Append JSONL. Never raises."""
+    """Append JSONL. Never raises. Rotates when the log grows too large."""
     try:
         path.parent.mkdir(parents=True, exist_ok=True)
+        if path.exists() and path.stat().st_size >= MAX_LOG_BYTES:
+            rotated = path.with_name(f"{path.stem}_{time.strftime('%Y%m%d_%H%M%S')}{path.suffix}")
+            os.rename(path, rotated)
         with path.open("a", encoding="utf-8") as f:
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
     except (OSError, ValueError, TypeError):
@@ -92,6 +109,7 @@ def acquire_singleton() -> bool:
                 kernel32.CloseHandle(handle)
             return False
         _LOCK_HANDLE = handle
+        atexit.register(_release_singleton)
         return True
     except Exception:  # noqa: BLE001 — non-Windows fallback
         return True
@@ -135,6 +153,10 @@ if __name__ == "__main__":
 
 ```python
 # test_singleton.py
+import sys
+import pytest
+
+@pytest.mark.skipif(sys.platform != "win32", reason="Windows named mutex only")
 def test_second_process_fails_to_acquire_mutex(tmp_path):
     import autonomous_loop as loop
     loop.MUTEX = r"Local\test_my_loop_singleton"
@@ -217,6 +239,7 @@ def unread_handoffs(inbox: Path, now: float | None = None) -> list[Path]:
 - [ ] Health snapshot is written to disk.
 - [ ] Fast check every tick; full check every N ticks.
 - [ ] A stalled/dead loop is detectable by a separate watcher.
+- [ ] Entry point reconfigures stdout/stderr to UTF-8 so paths/emoji don't crash on cp1252.
 
 ## Testing strategy
 
@@ -234,6 +257,7 @@ def unread_handoffs(inbox: Path, now: float | None = None) -> list[Path]:
 - **Console-only subprocess.** `stdin=None` (inherited) can break under `pythonw`.
 - **Unbounded logs / history.** Cap arrays and rotate JSONL.
 - **No stall detection.** A loop that hangs silently looks healthy; add an external tick watcher.
+- **cp1252 console crash.** Any watcher/CLI that prints `ψ`, Thai, or emoji must call `sys.stdout.reconfigure(encoding="utf-8")` at entry.
 
 ## Example command reference
 

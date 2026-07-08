@@ -3,7 +3,10 @@ import json
 import os
 import subprocess
 import sys
+import time
 from pathlib import Path
+
+import pytest
 
 import autonomous_loop as loop
 
@@ -47,6 +50,7 @@ def test_append_log_bad_path_does_not_raise():
     loop.append_log({"x": 1}, Path("\x00/invalid/loop.jsonl"))
 
 
+@pytest.mark.skipif(sys.platform != "win32", reason="Windows named mutex only")
 def test_singleton_acquired_once():
     loop.MUTEX = r"Local\test_example_singleton_1"
     assert loop.acquire_singleton() is True
@@ -59,6 +63,7 @@ def test_singleton_acquired_once():
         loop._LOCK_HANDLE = None
 
 
+@pytest.mark.skipif(sys.platform != "win32", reason="Windows named mutex only")
 def test_singleton_excludes_second_process(tmp_path):
     loop.MUTEX = r"Local\test_example_singleton_2"
     assert loop.acquire_singleton() is True
@@ -79,6 +84,19 @@ print(loop.acquire_singleton())
         except Exception:
             pass
         loop._LOCK_HANDLE = None
+
+
+def test_append_log_rotates_when_oversized(tmp_path, monkeypatch):
+    monkeypatch.setattr(loop, "MAX_LOG_BYTES", 10)
+    p = tmp_path / "loop.jsonl"
+    p.write_text("0" * 20, encoding="utf-8")  # pre-seed above limit
+    time.sleep(0.01)
+    loop.append_log({"cycle": 1}, p)
+    # original path should contain only the new line after rotation
+    lines = p.read_text(encoding="utf-8").strip().splitlines()
+    assert len(lines) == 1
+    assert json.loads(lines[0])["cycle"] == 1
+    assert len(list(p.parent.glob("loop_*.jsonl"))) == 1
 
 
 def test_pythonw_safe_run_does_not_inherit_stdin():

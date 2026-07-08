@@ -5,6 +5,7 @@ Run:  python example/autonomous_loop.py --max-cycles 3
 """
 from __future__ import annotations
 
+import atexit
 import ctypes
 import json
 import os
@@ -18,7 +19,19 @@ ROOT = Path(__file__).resolve().parent
 LOG = ROOT / "loop.jsonl"
 MUTEX = os.environ.get("LOOP_MUTEX", r"Local\jit_autonomous_loop_example")
 INTERVAL = int(os.environ.get("LOOP_INTERVAL", "300"))
+MAX_LOG_BYTES = int(os.environ.get("LOOP_MAX_LOG_BYTES", str(50 * 1024 * 1024)))
 _LOCK_HANDLE: Any | None = None
+
+
+def _release_singleton() -> None:
+    """Best-effort release of the Windows named mutex handle on exit."""
+    global _LOCK_HANDLE
+    if _LOCK_HANDLE and sys.platform == "win32":
+        try:
+            ctypes.windll.kernel32.CloseHandle(_LOCK_HANDLE)
+        except Exception:  # noqa: BLE001
+            pass
+        _LOCK_HANDLE = None
 
 
 def run_cycle(cycle_no: int,
@@ -40,9 +53,12 @@ def run_cycle(cycle_no: int,
 
 
 def append_log(record: dict, path: Path = LOG) -> None:
-    """Append JSONL. Never raises."""
+    """Append JSONL. Never raises. Rotates when the log grows too large."""
     try:
         path.parent.mkdir(parents=True, exist_ok=True)
+        if path.exists() and path.stat().st_size >= MAX_LOG_BYTES:
+            rotated = path.with_name(f"{path.stem}_{time.strftime('%Y%m%d_%H%M%S')}{path.suffix}")
+            os.rename(path, rotated)
         with path.open("a", encoding="utf-8") as f:
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
     except (OSError, ValueError, TypeError):
@@ -62,6 +78,7 @@ def acquire_singleton() -> bool:
                 kernel32.CloseHandle(handle)
             return False
         _LOCK_HANDLE = handle
+        atexit.register(_release_singleton)
         return True
     except Exception:  # noqa: BLE001
         return True
