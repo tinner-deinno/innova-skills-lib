@@ -1,3 +1,8 @@
+---
+name: monitor
+description: "Skill workflow for monitor."
+---
+
 # /monitor — ระบบ TUI Monitoring สำหรับ Sub-Agents
 
 ## ภาพรวม

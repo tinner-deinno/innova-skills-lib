@@ -1,3 +1,8 @@
+---
+name: model-copilot
+description: "Skill workflow for model-copilot."
+---
+
 # Skill: /model-copilot — ส่งงานผ่าน GitHub Copilot API
 
 > "ปัญญา GitHub — Copilot เข้าถึง GPT-4o + Claude + o1 ผ่าน GitHub subscription"

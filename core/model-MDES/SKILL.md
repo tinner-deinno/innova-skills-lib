@@ -1,3 +1,8 @@
+---
+name: model-MDES
+description: "Skill workflow for model-MDES."
+---
+
 # Skill: /model-MDES — ส่งงานไปยัง MDES Ollama
 
 > "วิริยะ — ความพยายามที่ถูกทิศทาง ผ่าน MDES Ollama ของทีม"

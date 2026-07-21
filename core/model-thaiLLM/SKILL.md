@@ -1,3 +1,8 @@
+---
+name: model-thaiLLM
+description: "Skill workflow for model-thaiLLM."
+---
+
 # Skill: /model-thaiLLM — ส่งงานไปยัง ThaiLLM Gang
 
 > "ปัญญาไทย — เลือกโมเดลให้ถูกกับงาน สร้างผลลัพธ์ที่มีความหมาย"

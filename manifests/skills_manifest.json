@@ -1,7 +1,7 @@
 {
   "manifest_version": "1.0",
-  "generated": "2026-07-06T09:33:36.949568Z",
-  "total": 295,
+  "generated": "2026-07-21T20:16:52.205280Z",
+  "total": 300,
   "categories": [
     "core",
     "ecc"
@@ -32,10 +32,10 @@
     },
     {
       "id": "agents-logs",
-      "name": "Agents Logs",
+      "name": "agents-logs",
       "path": "agents-logs",
       "version": "2026.05.24",
-      "description": "`/agents-logs` วิเคราะห์ telemetry log จาก `ψ/telemetry/token_log.jsonl`",
+      "description": "Skill workflow for agents-logs.",
       "runtimes": [
         "claude"
       ],
@@ -55,10 +55,10 @@
     },
     {
       "id": "agents-rank",
-      "name": "Agents Rank",
+      "name": "agents-rank",
       "path": "agents-rank",
       "version": "2026.05.24",
-      "description": "`/agents-rank` วิเคราะห์ประสิทธิภาพของ agents จากข้อมูลจริง:",
+      "description": "Skill workflow for agents-rank.",
       "runtimes": [
         "claude"
       ],
@@ -78,10 +78,10 @@
     },
     {
       "id": "agents-skills",
-      "name": "Agents Skills",
+      "name": "agents-skills",
       "path": "agents-skills",
       "version": "2026.05.24",
-      "description": "`/agents-skills` แสดงโปรไฟล์ทักษะของ agents ทั้งหมดในระบบมนุษย์ Agent (21 agents)",
+      "description": "Skill workflow for agents-skills.",
       "runtimes": [
         "claude"
       ],
@@ -124,10 +124,10 @@
     },
     {
       "id": "auto-model",
-      "name": "Auto Model",
+      "name": "auto-model",
       "path": "auto-model",
       "version": "2026.05.24",
-      "description": "ระบบตรวจสอบและสำรองโมเดลอัตโนมัติ สำหรับ mdes.ollama endpoint",
+      "description": "Skill workflow for auto-model.",
       "runtimes": [
         "claude"
       ],
@@ -147,10 +147,10 @@
     },
     {
       "id": "auto-model-switch",
-      "name": "Auto Model Switch",
+      "name": "auto-model-switch",
       "path": "auto-model-switch",
       "version": "2026.05.24",
-      "description": "Auto-selects the best AI model for the task — saves tokens, optimizes quality.",
+      "description": "Skill workflow for auto-model-switch.",
       "runtimes": [
         "claude"
       ],
@@ -170,10 +170,10 @@
     },
     {
       "id": "auto-tune",
-      "name": "Auto Tune",
+      "name": "auto-tune",
       "path": "auto-tune",
       "version": "2026.05.24",
-      "description": "Analyze token telemetry data (`token_log.jsonl`) to identify inefficient agents and skills, then produce actionable optimization recommendations.",
+      "description": "Skill workflow for auto-tune.",
       "runtimes": [
         "claude"
       ],
@@ -274,6 +274,29 @@
       },
       "triggers": [
         "compact-recovery"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
+      "id": "csoc-fleet-deploy",
+      "name": "csoc-fleet-deploy",
+      "path": "csoc-fleet-deploy",
+      "version": "2026.05.24",
+      "description": "Skill workflow for csoc-fleet-deploy.",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "csoc-fleet-deploy"
       ],
       "author": "team/jit-bigboss",
       "category": "core",
@@ -4517,10 +4540,10 @@
     },
     {
       "id": "gang",
-      "name": "Gang",
+      "name": "gang",
       "path": "gang",
       "version": "2026.05.24",
-      "description": "`/gang` เป็น skill สำหรับโต้ตอบและจัดการระบบ multi-agent-gangs — กรอบการทำงานแบบ demonstration ที่ประกอบด้วย 4 gangs เฉพาะทาง ได้แก่ DevOps, CI/CD, Jarvis และ Special",
+      "description": "Skill workflow for gang.",
       "runtimes": [
         "claude"
       ],
@@ -6104,10 +6127,10 @@
     },
     {
       "id": "jit",
-      "name": "Jit",
+      "name": "jit",
       "path": "jit",
       "version": "2026.05.24",
-      "description": "Jit Agent คือตัวแทน AI อิสระที่ทำงานร่วมกับ BigBoss ในระบบ multi-agent-gangs สามารถสั่งการ นาย (Boss Orchestrator) และมอบหมายงานให้กลุ่มต่างๆ ได้โดยตรง",
+      "description": "Skill workflow for jit.",
       "runtimes": [
         "claude"
       ],
@@ -6126,11 +6149,34 @@
       "manifest_version": "1.0"
     },
     {
+      "id": "jit-autonomous-loop",
+      "name": "jit-autonomous-loop",
+      "path": "jit-autonomous-loop",
+      "version": "2026.05.24",
+      "description": "|",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "jit-autonomous-loop"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
       "id": "jit-bootstrap",
-      "name": "Jit Bootstrap",
+      "name": "jit-bootstrap",
       "path": "jit-bootstrap",
       "version": "2026.05.24",
-      "description": "```",
+      "description": "Skill workflow for jit-bootstrap.",
       "runtimes": [
         "claude"
       ],
@@ -6139,6 +6185,52 @@
       },
       "triggers": [
         "jit-bootstrap"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
+      "id": "jit-path-discipline",
+      "name": "jit-path-discipline",
+      "path": "jit-path-discipline",
+      "version": "2026.05.24",
+      "description": "|",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "jit-path-discipline"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
+      "id": "jit-scrutinize",
+      "name": "jit-scrutinize",
+      "path": "jit-scrutinize",
+      "version": "2026.05.24",
+      "description": "Skill workflow for jit-scrutinize.",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "jit-scrutinize"
       ],
       "author": "team/jit-bigboss",
       "category": "core",
@@ -6173,10 +6265,10 @@
     },
     {
       "id": "learnself",
-      "name": "Learnself",
+      "name": "learnself",
       "path": "learnself",
       "version": "2026.05.24",
-      "description": "`/learnself` คือทักษะสำหรับระบบเรียนรู้อัตโนมัติและการส่งต่องานระหว่าง Agent ในกลุ่ม Multi-Agent Gangs ระบบนี้ช่วยให้ Agent สามารถ:",
+      "description": "Skill workflow for learnself.",
       "runtimes": [
         "claude"
       ],
@@ -6219,10 +6311,10 @@
     },
     {
       "id": "mdes-ollama",
-      "name": "Mdes Ollama",
+      "name": "mdes-ollama",
       "path": "mdes-ollama",
       "version": "2026.05.24",
-      "description": "`/mdes-ollama` คือ skill หลักสำหรับระบบทดสอบและสำรองโมเดล AI อัตโนมัติ — ทำหน้าที่เป็นตัวประสานงาน (orchestrator) ให้กับทุก skill ที่ต้องการใช้ AI models",
+      "description": "Skill workflow for mdes-ollama.",
       "runtimes": [
         "claude"
       ],
@@ -6242,10 +6334,10 @@
     },
     {
       "id": "model-claude",
-      "name": "Model Claude",
+      "name": "model-claude",
       "path": "model-claude",
       "version": "2026.05.24",
-      "description": "`/model-claude` เป็น meta-skill สำหรับ clarify ว่า BigBoss ต้องการใช้ Claude model ตัวใด",
+      "description": "Skill workflow for model-claude.",
       "runtimes": [
         "claude"
       ],
@@ -6265,10 +6357,10 @@
     },
     {
       "id": "model-compare",
-      "name": "Model Compare",
+      "name": "model-compare",
       "path": "model-compare",
       "version": "2026.05.24",
-      "description": "ส่ง prompt เดียวกันไปหลายโมเดล แล้วแสดงผลเปรียบเทียบพร้อมกัน",
+      "description": "Skill workflow for model-compare.",
       "runtimes": [
         "claude"
       ],
@@ -6288,10 +6380,10 @@
     },
     {
       "id": "model-copilot",
-      "name": "Model Copilot",
+      "name": "model-copilot",
       "path": "model-copilot",
       "version": "2026.05.24",
-      "description": "`/model-copilot` ส่งงานผ่าน GitHub Copilot Chat API",
+      "description": "Skill workflow for model-copilot.",
       "runtimes": [
         "claude"
       ],
@@ -6311,10 +6403,10 @@
     },
     {
       "id": "model-gpt",
-      "name": "Model Gpt",
+      "name": "model-GPT",
       "path": "model-GPT",
       "version": "2026.05.24",
-      "description": "`/model-GPT` ส่งงานไปยัง OpenAI API โดยตรง",
+      "description": "Skill workflow for model-GPT.",
       "runtimes": [
         "claude"
       ],
@@ -6334,10 +6426,10 @@
     },
     {
       "id": "model-list-status",
-      "name": "Model List Status",
+      "name": "model-list-status",
       "path": "model-list-status",
       "version": "2026.05.24",
-      "description": "ตรวจสอบ AI model endpoints ทั้งหมดและแสดงตาราง status + latency",
+      "description": "Skill workflow for model-list-status.",
       "runtimes": [
         "claude"
       ],
@@ -6357,10 +6449,10 @@
     },
     {
       "id": "model-local",
-      "name": "Model Local",
+      "name": "model-local",
       "path": "model-local",
       "version": "2026.05.24",
-      "description": "`/model-local` ส่งงานไปยัง Ollama ที่รันบนเครื่อง `localhost:11434`",
+      "description": "Skill workflow for model-local.",
       "runtimes": [
         "claude"
       ],
@@ -6380,10 +6472,10 @@
     },
     {
       "id": "model-mdes",
-      "name": "Model Mdes",
+      "name": "model-MDES",
       "path": "model-MDES",
       "version": "2026.05.24",
-      "description": "`/model-MDES` ส่งงานไปยัง MDES Ollama endpoint (`https://ollama.mdes-innova.online`)",
+      "description": "Skill workflow for model-MDES.",
       "runtimes": [
         "claude"
       ],
@@ -6403,10 +6495,10 @@
     },
     {
       "id": "model-openclaude",
-      "name": "Model Openclaude",
+      "name": "model-openclaude",
       "path": "model-openclaude",
       "version": "2026.05.24",
-      "description": "เปิด openclaude TUI หรือรันคำสั่งแบบ non-interactive ผ่าน provider ที่ต้องการ",
+      "description": "Skill workflow for model-openclaude.",
       "runtimes": [
         "claude"
       ],
@@ -6426,10 +6518,10 @@
     },
     {
       "id": "model-thaillm",
-      "name": "Model Thaillm",
+      "name": "model-thaiLLM",
       "path": "model-thaiLLM",
       "version": "2026.05.24",
-      "description": "`/model-thaiLLM` ส่งงานปัจจุบันไปยัง ThaiLLM API และเลือกโมเดลที่เหมาะสมที่สุดโดยอัตโนมัติ",
+      "description": "Skill workflow for model-thaiLLM.",
       "runtimes": [
         "claude"
       ],
@@ -6449,10 +6541,10 @@
     },
     {
       "id": "monitor",
-      "name": "Monitor",
+      "name": "monitor",
       "path": "monitor",
       "version": "2026.05.24",
-      "description": "`/monitor` เป็นทักษะสำหรับติดตามและ наблюдател (observe) สถานะของ sub-agents แบบเรียลไทม์ผ่าน Terminal User Interface (TUI)",
+      "description": "Skill workflow for monitor.",
       "runtimes": [
         "claude"
       ],
@@ -6472,10 +6564,10 @@
     },
     {
       "id": "nemotron",
-      "name": "Nemotron",
+      "name": "nemotron",
       "path": "nemotron",
       "version": "2026.05.24",
-      "description": "`/nemotron` คือ skill ที่ช่วยให้สามารถเรียกใช้ sub-agent ที่ใช้ nemotron-3-super:cloud เป็น AI engine หลัก สำหรับงาน multi-agent orchestration ที่ทรงพลัง",
+      "description": "Skill workflow for nemotron.",
       "runtimes": [
         "claude"
       ],
@@ -6495,10 +6587,10 @@
     },
     {
       "id": "ollama-test",
-      "name": "Ollama Test",
+      "name": "ollama-test",
       "path": "ollama-test",
       "version": "2026.05.24",
-      "description": "ทักษะนี้ใช้ทดสอบ Ollama cloud models ว่า model ใดทำงานได้จริงกับ endpoint `mdes.ollama` พร้อมทั้งตรวจสอบ token limit และ usage percentage",
+      "description": "Skill workflow for ollama-test.",
       "runtimes": [
         "claude"
       ],
@@ -6656,10 +6748,10 @@
     },
     {
       "id": "self-improve",
-      "name": "Self Improve",
+      "name": "self-improve",
       "path": "self-improve",
       "version": "2026.05.24",
-      "description": "ทักษะนี้ไม่ใช่แค่การทำงาน แต่เป็นวงจรการเรียนรู้ที่พัฒนาตัวเองได้:",
+      "description": "Skill workflow for self-improve.",
       "runtimes": [
         "claude"
       ],
@@ -6702,10 +6794,10 @@
     },
     {
       "id": "teach",
-      "name": "Teach",
+      "name": "teach",
       "path": "teach",
       "version": "2026.05.24",
-      "description": "Claude closes the teaching gap in the Mentorship System by recording BigBoss feedback directly into agent profiles.",
+      "description": "Skill workflow for teach.",
       "runtimes": [
         "claude"
       ],
@@ -6760,6 +6852,29 @@
       },
       "triggers": [
         "trace"
+      ],
+      "author": "team/jit-bigboss",
+      "category": "core",
+      "tags": [
+        "core"
+      ],
+      "last_updated": "2026-05-24T00:00:00Z",
+      "manifest_version": "1.0"
+    },
+    {
+      "id": "workflow-codify",
+      "name": "workflow-codify",
+      "path": "workflow-codify",
+      "version": "2026.05.24",
+      "description": "|",
+      "runtimes": [
+        "claude"
+      ],
+      "adapter_status": {
+        "claude": "ok"
+      },
+      "triggers": [
+        "workflow-codify"
       ],
       "author": "team/jit-bigboss",
       "category": "core",

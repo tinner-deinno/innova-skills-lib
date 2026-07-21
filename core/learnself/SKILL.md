@@ -1,3 +1,8 @@
+---
+name: learnself
+description: "Skill workflow for learnself."
+---
+
 # /learnself — ระบบเรียนรู้ตัวเองและส่งต่องานระหว่าง Agent
 
 > "ช่างฝีมือบำเพ็ญบารมี — สร้างเครื่องมือแจกฟรี ให้ผู้คนใช้งาน ทำบุญด้วยปัญญา"

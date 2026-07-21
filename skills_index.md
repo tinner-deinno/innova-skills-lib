@@ -1,7 +1,7 @@
 # Skills Index
 
-Generated: 2026-07-06  
-Total: **295** skills  
+Generated: 2026-07-21  
+Total: **300** skills  
 
 ---
 
@@ -10,21 +10,22 @@ Total: **295** skills
 | ID | Name | Description |
 |---|---|---|
 | `about-oracle` | about-oracle | [core] v26.5.16 G-SKLL \| What is Oracle — told by the AI itself. Origin story, stats, family count, |
-| `agents-logs` | Agents Logs | `/agents-logs` วิเคราะห์ telemetry log จาก `ψ/telemetry/token_log.jsonl` |
-| `agents-rank` | Agents Rank | `/agents-rank` วิเคราะห์ประสิทธิภาพของ agents จากข้อมูลจริง: |
-| `agents-skills` | Agents Skills | `/agents-skills` แสดงโปรไฟล์ทักษะของ agents ทั้งหมดในระบบมนุษย์ Agent (21 agents) |
+| `agents-logs` | agents-logs | Skill workflow for agents-logs. |
+| `agents-rank` | agents-rank | Skill workflow for agents-rank. |
+| `agents-skills` | agents-skills | Skill workflow for agents-skills. |
 | `auto-compact` | auto-compact | Proactive context management — save state, compact, recover. Fire when context approaches limit to p |
-| `auto-model` | Auto Model | ระบบตรวจสอบและสำรองโมเดลอัตโนมัติ สำหรับ mdes.ollama endpoint |
-| `auto-model-switch` | Auto Model Switch | Auto-selects the best AI model for the task — saves tokens, optimizes quality. |
-| `auto-tune` | Auto Tune | Analyze token telemetry data (`token_log.jsonl`) to identify inefficient agents and skills, then pro |
+| `auto-model` | auto-model | Skill workflow for auto-model. |
+| `auto-model-switch` | auto-model-switch | Skill workflow for auto-model-switch. |
+| `auto-tune` | auto-tune | Skill workflow for auto-tune. |
 | `awaken` | awaken | [core] v26.4.18-alpha.22 G-SKLL \| "Guided Oracle birth and awakening ritual. Default is Soul Sync ( |
 | `bampenpien` | bampenpien | [core] v26.4.18-alpha.22 G-SKLL \| "บำเพ็ญเพียร — diligent practice. A guided conversation between h |
 | `bud` | bud | [core] v26.4.18-alpha.22 G-SKLL \| Create a new oracle via maw bud — yeast-colony reproduction. Use  |
 | `compact-recovery` | compact-recovery | Recover skills and state after context compaction — restores Oracle awareness |
+| `csoc-fleet-deploy` | csoc-fleet-deploy | Skill workflow for csoc-fleet-deploy. |
 | `debug-mantra` | debug-mantra | Four-mantra debugging discipline — reproduce, trace the fail path, falsify the hypothesis, cross-ref |
 | `dig` | dig | [core] v26.4.18-alpha.22 G-SKLL \| Mine Claude Code sessions — timeline, gaps, repo attribution, ses |
 | `forward` | forward | [standard] v26.5.16 G-SKLL \| Create handoff + enter plan mode for next session. Use when user says  |
-| `gang` | Gang | `/gang` เป็น skill สำหรับโต้ตอบและจัดการระบบ multi-agent-gangs — กรอบการทำงานแบบ demonstration ที่ปร |
+| `gang` | gang | Skill workflow for gang. |
 | `go` | go | [standard] v26.5.16 G-SKLL \| Manage Oracle skills — list, install, remove, find, switch profiles, u |
 | `gsd-add-tests` | gsd-add-tests | Generate tests for a completed phase based on UAT criteria and implementation |
 | `gsd-ai-integration-phase` | gsd-ai-integration-phase | Generate an AI-SPEC.md design contract for phases that involve building AI systems. |
@@ -93,35 +94,39 @@ Total: **295** skills
 | `gsd-verify-work` | gsd-verify-work | Validate built features through conversational UAT |
 | `gsd-workspace` | gsd-workspace | Manage GSD workspaces — create, list, or remove isolated workspace environments |
 | `gsd-workstreams` | gsd-workstreams | Manage parallel workstreams — list, create, switch, status, progress, complete, and resume |
-| `jit` | Jit | Jit Agent คือตัวแทน AI อิสระที่ทำงานร่วมกับ BigBoss ในระบบ multi-agent-gangs สามารถสั่งการ นาย (Boss |
-| `jit-bootstrap` | Jit Bootstrap | ``` |
+| `jit` | jit | Skill workflow for jit. |
+| `jit-autonomous-loop` | jit-autonomous-loop | \| |
+| `jit-bootstrap` | jit-bootstrap | Skill workflow for jit-bootstrap. |
+| `jit-path-discipline` | jit-path-discipline | \| |
+| `jit-scrutinize` | jit-scrutinize | Skill workflow for jit-scrutinize. |
 | `learn` | learn | [core] v26.4.18-alpha.22 G-SKLL \| Explore a codebase with parallel Haiku agents — clone, read, and  |
-| `learnself` | Learnself | `/learnself` คือทักษะสำหรับระบบเรียนรู้อัตโนมัติและการส่งต่องานระหว่าง Agent ในกลุ่ม Multi-Agent Gan |
+| `learnself` | learnself | Skill workflow for learnself. |
 | `management-talk` | management-talk | Rewrite engineer-to-engineer content for engineering-org leadership (VPs, directors, PMs, release ma |
-| `mdes-ollama` | Mdes Ollama | `/mdes-ollama` คือ skill หลักสำหรับระบบทดสอบและสำรองโมเดล AI อัตโนมัติ — ทำหน้าที่เป็นตัวประสานงาน ( |
-| `model-claude` | Model Claude | `/model-claude` เป็น meta-skill สำหรับ clarify ว่า BigBoss ต้องการใช้ Claude model ตัวใด |
-| `model-compare` | Model Compare | ส่ง prompt เดียวกันไปหลายโมเดล แล้วแสดงผลเปรียบเทียบพร้อมกัน |
-| `model-copilot` | Model Copilot | `/model-copilot` ส่งงานผ่าน GitHub Copilot Chat API |
-| `model-gpt` | Model Gpt | `/model-GPT` ส่งงานไปยัง OpenAI API โดยตรง |
-| `model-list-status` | Model List Status | ตรวจสอบ AI model endpoints ทั้งหมดและแสดงตาราง status + latency |
-| `model-local` | Model Local | `/model-local` ส่งงานไปยัง Ollama ที่รันบนเครื่อง `localhost:11434` |
-| `model-mdes` | Model Mdes | `/model-MDES` ส่งงานไปยัง MDES Ollama endpoint (`https://ollama.mdes-innova.online`) |
-| `model-openclaude` | Model Openclaude | เปิด openclaude TUI หรือรันคำสั่งแบบ non-interactive ผ่าน provider ที่ต้องการ |
-| `model-thaillm` | Model Thaillm | `/model-thaiLLM` ส่งงานปัจจุบันไปยัง ThaiLLM API และเลือกโมเดลที่เหมาะสมที่สุดโดยอัตโนมัติ |
-| `monitor` | Monitor | `/monitor` เป็นทักษะสำหรับติดตามและ наблюдател (observe) สถานะของ sub-agents แบบเรียลไทม์ผ่าน Termin |
-| `nemotron` | Nemotron | `/nemotron` คือ skill ที่ช่วยให้สามารถเรียกใช้ sub-agent ที่ใช้ nemotron-3-super:cloud เป็น AI engin |
-| `ollama-test` | Ollama Test | ทักษะนี้ใช้ทดสอบ Ollama cloud models ว่า model ใดทำงานได้จริงกับ endpoint `mdes.ollama` พร้อมทั้งตรว |
+| `mdes-ollama` | mdes-ollama | Skill workflow for mdes-ollama. |
+| `model-claude` | model-claude | Skill workflow for model-claude. |
+| `model-compare` | model-compare | Skill workflow for model-compare. |
+| `model-copilot` | model-copilot | Skill workflow for model-copilot. |
+| `model-gpt` | model-GPT | Skill workflow for model-GPT. |
+| `model-list-status` | model-list-status | Skill workflow for model-list-status. |
+| `model-local` | model-local | Skill workflow for model-local. |
+| `model-mdes` | model-MDES | Skill workflow for model-MDES. |
+| `model-openclaude` | model-openclaude | Skill workflow for model-openclaude. |
+| `model-thaillm` | model-thaiLLM | Skill workflow for model-thaiLLM. |
+| `monitor` | monitor | Skill workflow for monitor. |
+| `nemotron` | nemotron | Skill workflow for nemotron. |
+| `ollama-test` | ollama-test | Skill workflow for ollama-test. |
 | `oracle-soul-sync-update` | oracle-soul-sync-update | [core] v26.4.18-alpha.22 G-SKLL \| Sync Oracle instruments with the family. Check and update skills  |
 | `post-mortem` | post-mortem | Write the canonical engineering record of a fixed bug — root cause, mechanism, fix, validation, and  |
 | `recap` | recap | [standard] v26.5.16 G-SKLL \| Session orientation and awareness — retro summaries, handoffs, git sta |
 | `rrr` | rrr | [standard] v26.5.16 G-SKLL \| Create session retrospective with AI diary and lessons learned. Use wh |
 | `screenshot` | screenshot | Take screenshot via ShareX or Playwright |
 | `scrutinize` | scrutinize | Outsider-perspective end-to-end review of a plan, PR, or code change. First questions intent and whe |
-| `self-improve` | Self Improve | ทักษะนี้ไม่ใช่แค่การทำงาน แต่เป็นวงจรการเรียนรู้ที่พัฒนาตัวเองได้: |
+| `self-improve` | self-improve | Skill workflow for self-improve. |
 | `talk-to` | talk-to | [core] v26.4.18-alpha.22 G-SKLL \| Talk to another Oracle agent via contacts + threads. Use when use |
-| `teach` | Teach | Claude closes the teaching gap in the Mentorship System by recording BigBoss feedback directly into  |
+| `teach` | teach | Skill workflow for teach. |
 | `team-agents` | team-agents | [core] v26.4.18-alpha.22 G-SKLL \| Spin up coordinated agent teams for any task. Reusable framework  |
 | `trace` | trace | [standard] v26.5.16 G-SKLL \| Find projects, code, and knowledge across git history, repos, docs, an |
+| `workflow-codify` | workflow-codify | \| |
 | `xray` | xray | [core] v26.4.18-alpha.22 G-SKLL \| X-ray deep scan — inspect Claude Code auto-memory, installed skil |
 
 ## ECC
