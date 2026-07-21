@@ -1,3 +1,8 @@
+---
+name: gang
+description: "Skill workflow for gang."
+---
+
 # Skill: /gang — ระบบ Multi-Agent Gangs
 
 > "ช่างฝีมือจัดการฝูง — ประสานงานหลาย agent ให้ทำงานเป็นทีม"

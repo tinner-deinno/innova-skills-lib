@@ -1,3 +1,8 @@
+---
+name: model-claude
+description: "Skill workflow for model-claude."
+---
+
 # Skill: /model-claude — ใช้ Claude API โดยตรง (session ปัจจุบัน)
 
 > "ปัญญา Anthropic — ใช้ Claude ในงานที่ต้องการ reasoning ลึก หรือ coding ระดับสูง"

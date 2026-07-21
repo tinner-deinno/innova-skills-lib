@@ -1,3 +1,8 @@
+---
+name: jit-bootstrap
+description: "Skill workflow for jit-bootstrap."
+---
+
 # Skill: /jit-bootstrap — บูตสแตรป + เช็คสุขภาพ Jit ข้าม runtime
 
 > **เป้าหมาย**: หลัง `git pull` Jit เสร็จ ให้รันคำสั่งเดียวแล้วทุกอวัยวะพร้อมทำงาน

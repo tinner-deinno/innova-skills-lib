@@ -251,6 +251,74 @@ python tools/jit_progress_tick.py --status || echo "STALLED"
 python tools/handoff_inbox_watcher.py || echo "HANDOFFS PENDING"
 ```
 
+## Provider × Sub-agent Profile Map (v26.7.20)
+
+The 13 provider launchers below all live in `~/.local/bin/claude-*.cmd` (shim into
+`Jit/scripts/claude-provider.ps1`). The 14 Jit organs live in
+`Jit/network/registry.json` and report through `Jit/ψ/bus/inbox/<name>/`.
+
+| Provider | Type | Best for | Sub-agent pairing | Notes |
+|---|---|---|---|---|
+| `claude-claude` | native | Opus 4.8 / Sonnet 4.6 / Haiku 4.5 | jit (mother), soma (brain), lak (architect) | Use `--dangerously-skip-permissions` only in sandbox. |
+| `claude-ollama` | native | Continuity after session limit | jit (resume) | `ollama launch claude --` under the hood. |
+| `claude-codex` | native | Long-running dev work | codex (CI/dev lead) | `ollama launch codex --` under the hood. |
+| `claude-oc` | direct | Multi-provider inside one CLI | all organs (interactive) | No print-mode contract — use TUI `/provider`. |
+| `claude-mdes` | proxy | Thai review, brainstorm, code review | lak, neta, chayapat (brainstorm) | gemma4:26b, MDES cloud, prompt-only. |
+| `claude-cmdc` | proxy | Fast code, pair-programming | mue, neta (refactor) | DeepSeek Flash, prompt-only, 429 budget. |
+| `claude-thaillm` | proxy | Thai-native, small summarization | vaja (Thai PA), thaidocs | 8B instruct, prompt-only. |
+| `claude-gg` | proxy | Vision + Gemini review | rupa (design), neta | Gemini 2.5 Flash, 429 budget. |
+| `claude-gh` | proxy | GitHub-Copilot-tier code | mue, innova | Requires Copilot entitlement on gh account. |
+| `claude-gpt` | proxy | OpenAI-compatible fallback | mua, fallback | Not native OpenAI. |
+| `claude-local` | proxy | Local Ollama fallback | any organ when cloud down | `qwen2.5:7b-instruct` local. |
+| `claude-clew` | direct | Single-shot local ClewCode | adhoc | `--bare --print` only, no cred passthrough. |
+| `claude-agy` | direct | AGY (Antigravity CLI · Gemini Pro) | neta, rupa | Interactive AGY; do not run in proxy mode. |
+
+### Sub-agent profile map (Jit organs)
+
+14 Jit organs inherit the provider their parent reports to. The file-bus
+(`Jit/ψ/bus/inbox/<name>/`) is the only mandatory shared transport.
+
+| Organ | Parent | Provider order | Token budget |
+|---|---|---|---|
+| jit (master) | — | claude-claude → claude-oc → claude-mdes | high (mother) |
+| soma (brain) | jit | claude-claude → claude-mdes | high (advisor) |
+| innova (lead) | soma | claude-codex → claude-cmdc → claude-claude | medium |
+| lak (architect) | soma | claude-mdes → claude-claude | high |
+| neta (review) | soma | claude-mdes → claude-cmdc | medium |
+| pada (devops) | soma | claude-codex → claude-mdes | medium |
+| chayapat (advisor) | — | claude-mdes → claude-cmdc | high (Fable-class) |
+| netra (eye) | jit | claude-local → claude-cmdc | low |
+| karn (ear) | jit | claude-local → claude-cmdc | low |
+| mue (hand) | innova | claude-codex → claude-cmdc | medium |
+| vaja (mouth) | jit | claude-thaillm → claude-mdes | low (Thai-first) |
+| chamu (nose) | innova | claude-cmdc → claude-local | low |
+| rupa (form) | innova | claude-gg → claude-claude | medium |
+| pran (heart) | jit | claude-local → claude-mdes | low |
+
+### Decision tree (sub-agent choosing provider)
+
+1. **Thai or short summarization** → `claude-thaillm` first.
+2. **Review / brainstorm / architecture** → `claude-mdes` (gemma4:26b is
+   cheap and gives good adversarial feedback). Escalate to `claude-claude`
+   (Opus 4.8) only when MDES can't reach the depth.
+3. **Long dev session, file edits, multi-step** → `claude-codex` (native).
+4. **Pair-programming in a single round** → `claude-cmdc` (DeepSeek Flash).
+5. **Image / diagram / visual** → `claude-gg` (Gemini 2.5 Flash).
+6. **All providers 429 / 5xx** → fall back to `claude-local` (qwen2.5:7b).
+7. **Multi-provider inside one TUI** → `claude-oc` (interactive only).
+8. **Sub-agent that needs sandbox isolation** → `claude-clew` or
+   `claude-agy` (no cred passthrough).
+
+### Loop integration (jit's 30-min tick)
+
+- cron job `eb9513b5` (`*/30 * * * *`) runs the lightweight tick in this session.
+- Sub-agents MUST subscribe to their inbox in `Jit/ψ/bus/inbox/<name>/`.
+- The tick writes `Jit/ψ/outbox/tick-<TS>.md` and the debug ledger
+  `Jit/ψ/outbox/debug-ledger.md` — both are append-only history.
+- When the tick needs deeper review, it writes a file-bus handoff; the next
+  `claude-claude` or `claude-mdes` round picks it up. Never chain two
+  expensive provider calls inside the same tick.
+
 ## References
 
 - Proven in `Jit/tools/jit_progress_tick.py`

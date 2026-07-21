@@ -1,3 +1,8 @@
+---
+name: model-openclaude
+description: "Skill workflow for model-openclaude."
+---
+
 # /model-openclaude — เปิด OpenClaude ด้วย provider ที่เลือก
 
 เปิด openclaude TUI หรือรันคำสั่งแบบ non-interactive ผ่าน provider ที่ต้องการ  

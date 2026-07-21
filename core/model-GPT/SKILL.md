@@ -1,3 +1,8 @@
+---
+name: model-GPT
+description: "Skill workflow for model-GPT."
+---
+
 # Skill: /model-GPT — ส่งงานไปยัง OpenAI GPT API
 
 > "ปัญญา OpenAI — GPT-4o สำหรับงานทั่วไป, o1/o3 สำหรับ reasoning ลึก"

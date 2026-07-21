@@ -1,3 +1,8 @@
+---
+name: jit
+description: "Skill workflow for jit."
+---
+
 # Skill: /jit — ตัวแทน Jit Agent
 
 ## ภาพรวม

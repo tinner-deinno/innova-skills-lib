@@ -1,3 +1,8 @@
+---
+name: csoc-fleet-deploy
+description: "Skill workflow for csoc-fleet-deploy."
+---
+
 # Skill: /csoc-fleet-deploy — 3-phase hybrid deploy ของ URL-Checker ไปยัง CSOC fleet
 
 > **เป้าหมาย**: ส่ง URL-Checker เวอร์ชันใหม่ไปติดตั้งบน 4 CSOC machines (`mdes001`, `mdes002`, `pc-csoc001`, `pc-csoc002`) ด้วยขั้นตอน 3 phase: สร้าง+canary exe -> ติดตั้ง csoc_boi agent -> อัปเดต fleet

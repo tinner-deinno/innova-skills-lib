@@ -1,3 +1,8 @@
+---
+name: mdes-ollama
+description: "Skill workflow for mdes-ollama."
+---
+
 # Skill: /mdes-ollama — ระบบประสานงานโมเดลหลัก
 
 > "ช่างฝีมือประสานโมเดล — ทดสอบทุกโมเดล ให้ได้เครื่องมือที่พร้อมทำงาน"

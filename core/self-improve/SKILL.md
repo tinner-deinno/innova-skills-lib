@@ -1,3 +1,8 @@
+---
+name: self-improve
+description: "Skill workflow for self-improve."
+---
+
 # /self-improve — ทักษะพัฒนาตัวเองอัตโนมัติ
 
 > "เราเรียนรู้จากการทำ เราจำจากการสำเร็จ เราพัฒนาจากการแก้ไข"
