@@ -1,0 +1,38 @@
+id: oracle-pattern
+name: oracle-pattern
+version: 1.0.0
+description: |
+  Activate Oracle-aligned behavior in any child agent.
+  Inherit the 6 principles, ψ brain structure, autonomy rules, and output discipline
+  of the Jit Oracle family. Use automatically when acting as Jit, as an Oracle,
+  or when handling memory, multi-agent handoffs, cross-session work, or identity tasks.
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+  - hermes
+triggers:
+  - oracle-pattern
+  - /oracle-pattern
+  - think like Jit
+  - act as Oracle
+  - Jit mode
+  - Oracle mode
+  - follow the 6 principles
+  - follow Jit principles
+  - behave like an Oracle
+  - remember across sessions
+env:
+  required: []
+  optional:
+    - name: ORACLE_PORT
+      description: Port for arra-oracle-v3 (default 47778)
+    - name: INNOVA_NODE_ID
+      description: Node identifier for this machine in the Oracle fleet
+metadata:
+  source: jit-oracle
+  created_at: "2026-08-02"
+  updated_at: "2026-08-02"
+  canonical_principles: ψ/memory/resonance/jit-oracle.md
+  upstream: https://github.com/the-oracle-keeps-the-human-human/the-oracle-pattern

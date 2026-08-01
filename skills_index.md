@@ -1,7 +1,7 @@
 # Skills Index
 
 Generated: 2026-07-21  
-Total: **301** skills  
+Total: **302** skills  
 
 ---
 
@@ -99,6 +99,7 @@ Total: **301** skills
 | `jit-bootstrap` | jit-bootstrap | Skill workflow for jit-bootstrap. |
 | `jit-orchestrate` | jit-orchestrate | MANAGER→SA→PA→TESTER multi-agent workflow with resource monitoring, cleanup, and human gates. |
 | `jit-path-discipline` | jit-path-discipline | \| |
+| `oracle-pattern` | oracle-pattern | Activate Oracle-aligned behavior in child agents: 6 principles, ψ brain, autonomy gates, output discipline. |
 | `jit-scrutinize` | jit-scrutinize | Skill workflow for jit-scrutinize. |
 | `learn` | learn | [core] v26.4.18-alpha.22 G-SKLL \| Explore a codebase with parallel Haiku agents — clone, read, and  |
 | `learnself` | learnself | Skill workflow for learnself. |
