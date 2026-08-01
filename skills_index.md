@@ -1,7 +1,7 @@
 # Skills Index
 
 Generated: 2026-07-21  
-Total: **300** skills  
+Total: **301** skills  
 
 ---
 
@@ -97,6 +97,7 @@ Total: **300** skills
 | `jit` | jit | Skill workflow for jit. |
 | `jit-autonomous-loop` | jit-autonomous-loop | \| |
 | `jit-bootstrap` | jit-bootstrap | Skill workflow for jit-bootstrap. |
+| `jit-orchestrate` | jit-orchestrate | MANAGER→SA→PA→TESTER multi-agent workflow with resource monitoring, cleanup, and human gates. |
 | `jit-path-discipline` | jit-path-discipline | \| |
 | `jit-scrutinize` | jit-scrutinize | Skill workflow for jit-scrutinize. |
 | `learn` | learn | [core] v26.4.18-alpha.22 G-SKLL \| Explore a codebase with parallel Haiku agents — clone, read, and  |

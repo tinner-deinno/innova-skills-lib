@@ -1,0 +1,29 @@
+id: jit-orchestrate
+name: jit-orchestrate
+version: 1.0.0
+description: |
+  MANAGER→SA→PA→TESTER multi-agent workflow pattern for Jit/Oracle backlog execution.
+  Use for GitHub issues, pending items, feature hardening, or any workstream that needs
+  architecture analysis, implementation planning, code changes, and QA verification before
+  human review. Includes resource monitoring, worktree isolation, and automatic cleanup.
+author: team/jit-bigboss
+license: MIT
+category: workflow
+runtimes:
+  - claude
+triggers:
+  - jit-orchestrate
+  - /jit-orchestrate
+  - sa-pa-tester
+  - /sa-pa-tester
+env:
+  required: []
+  optional:
+    - name: MAX_AGENTS
+      description: Cap total subagents (default 20, max 30)
+    - name: MIN_FREE_RAM_GB
+      description: Abort if free RAM below this (default 1.5)
+metadata:
+  source: session-2fddc76a-wv81iklcz
+  created_at: "2026-08-02T00:00:00Z"
+  updated_at: "2026-08-02T00:00:00Z"
