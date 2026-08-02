@@ -1,0 +1,32 @@
+id: jit-continue-on-silence
+name: jit-continue-on-silence
+version: 1.0.0
+description: |
+  Continue working autonomously when the human is unavailable (10 min silence OR loop hook spins 5 times).
+  Full prior approval is assumed, but every mutation stays inside an isolated worktree or sandbox.
+  Output is validated before being declared done; Claude/Ollama Pro quotas are protected by preferring the non-Claude fleet.
+author: team/jit-bigboss
+license: MIT
+category: workflow
+runtimes:
+  - claude
+triggers:
+  - jit-continue-on-silence
+  - /jit-continue-on-silence
+  - continue-on-silence
+  - /continue-on-silence
+env:
+  required: []
+  optional:
+    - name: SILENCE_MINUTES
+      description: Minutes of human silence before auto-continue (default 10)
+    - name: LOOP_HOOK_SATURATION
+      description: Number of repeated loop hooks before auto-continue (default 5)
+    - name: MAX_PARALLEL_FLOWS
+      description: Hard cap on parallel workstreams (default 8)
+    - name: NON_CLAUDE_PROVIDERS
+      description: Comma-separated provider order for dev/bulk work (default mdes,commandcode,openrouter,google,codex,agy)
+metadata:
+  source: session-4dccbb73-2026-08-03
+  created_at: "2026-08-03T00:30:00Z"
+  updated_at: "2026-08-03T00:30:00Z"
