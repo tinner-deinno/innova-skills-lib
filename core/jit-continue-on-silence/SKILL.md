@@ -11,6 +11,7 @@ description: |
 > **Origin**: Boss directive 2026-08-03 — "auto จบได้จริง แบบฉันหลับปุ๋ยได้".
 > **Rule**: The human already approved the *what* and the *how*; Jit continues the *doing* when the human is silent.
 > **Non-negotiable guard**: every implementation lives in a worktree or sandbox first, and only graduates after 100% pass/useable verification.
+> **Updated 2026-08-03 01:35**: added machine-health / disk gate — if local machine is stressed, offload or reduce fanout before continuing.
 
 ## When to use this skill
 
@@ -44,21 +45,36 @@ The user has pre-approved:
 - Verify 100% pass/usable before merging or proceeding.
 - Protect Claude provider and Ollama Pro usage; do not hit 5-hour usage limits.
 
+## Machine-health gate (hard)
+
+Before each cycle or fanout:
+
+```powershell
+$diskC = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
+$freePct = $diskC.FreeSpace / $diskC.Size
+$cpu = (Get-Counter '\Processor(_Total)\% Processor Time').CounterSamples[0].CookedValue
+$ram = Get-CimInstance Win32_OperatingSystem | Select-Object FreePhysicalMemory, TotalVisibleMemorySize
+```
+
+| Free disk | Max parallel flows | Action |
+|---|---|---|
+| >20% | up to 6 | normal fanout allowed |
+| 10–20% | up to 2 | conservative; avoid heavy builds/scans |
+| <10% or RAM <1 GB free | 1 health-check only | stop, clean disk, or offload to peer |
+
+If local machine is constrained, prefer:
+1. Offload heavy work to mdes002 or another peer.
+2. Run only cheap, disk-light tasks (analysis, planning, test-only hardening).
+3. Do NOT start parallel browser scans or EXE builds.
+
 ## Execution pattern
 
 ```
 DETECT silence/hook-saturation
 │
-├─▶ CHECK machine health
-│     (CPU, RAM, disk; abort or reduce fanout if stressed)
+├─▶ CHECK machine health (disk % first)
 │
-├─▶ PICK workstreams from active backlog
-│     URL-Checker coverage hardening
-│     test-mode scan on mdes001
-│     test-mode scan on mdes002
-│     GDrive evidence-folder upload
-│     PR review / orchestration loop
-│     skill/docs/retro maintenance
+├─▶ PICK workstreams from active backlog, constrained by disk
 │
 ├─▶ SPAWN parallel flows in isolated worktrees/sandboxes
 │     DEV agents on non-Claude providers (codex, agy, commandcode, mdes, thaillm, gh copilot, gpt)
@@ -98,10 +114,10 @@ $diskC = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'" | Select-Obje
 
 | Machine state | Max parallel flows | Max agents per flow |
 |---|---|---|
-| Healthy (CPU<60%, RAM>4GB free, disk>10GB free) | 6–8 | 5 |
-| Warm (CPU 60–80%, RAM 2–4GB free, disk 5–10GB free) | 4 | 4 |
-| Stressed (CPU>80% or RAM<2GB or disk<5GB) | 2 | 3 |
-| Critical | 1 (health-check only) | 1 |
+| Healthy (CPU<60%, RAM>4GB free, disk>20% free) | 6–8 | 5 |
+| Warm (CPU 60–80%, RAM 2–4GB free, disk 10–20% free) | 2 | 3 |
+| Stressed (CPU>80% or RAM<2GB or disk 5–10% free) | 1 | 2 |
+| Critical (disk <5% or RAM <1GB) | 1 (health-check only) | 1 |
 
 ## Isolation rules
 
