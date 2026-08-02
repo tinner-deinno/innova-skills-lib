@@ -1,0 +1,37 @@
+id: oracle-master
+name: oracle-master
+version: 1.0.0
+description: |
+  Master console for the entire Oracle stack. Probes arra-oracle-v3, innova-bot,
+  maw-js, and Ollama; searches and ingests Oracle memory; lists agents, vault,
+  handoffs, and federation peers. One skill to operate every Oracle layer that
+  Jit owns.
+author: team/jit-bigboss
+license: MIT
+category: core
+runtimes:
+  - claude
+  - hermes
+triggers:
+  - oracle-master
+  - /oracle-master
+  - oracle console
+  - oracle status
+  - check oracle
+  - oracle health
+  - oracle search
+  - oracle ingest
+  - oracle sync
+env:
+  required: []
+  optional:
+    - name: JIT_NODE
+      description: Node identifier (default mdes001)
+    - name: ORACLE_API_URL
+      description: arra-oracle-v3 base URL (default http://127.0.0.1:47778)
+metadata:
+  source: jit-oracle
+  created_at: "2026-08-02"
+  updated_at: "2026-08-02"
+  cli: Jit/tools/oracle_master_cli.py
+  canonical_principles: ψ/memory/resonance/jit-oracle.md
